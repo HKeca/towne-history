@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import TestCanvas from './TestCanvas';
+import RingCanvas from './Ring';
 
 const App = () => (
   <div>
-    hello
-    test
+    <RingCanvas />
   </div>
 );
 
