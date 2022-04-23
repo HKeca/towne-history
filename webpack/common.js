@@ -6,7 +6,18 @@ exports.common = {
     extensions: ['.js', '.jsx'],
   },
   module: {
-    rules: []
+    rules: [
+      {
+        test: /\.js|x$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+        exclude: /node_modules/,
+      },
+    ],
   },
   output: {
     filename: 'bundle.js',
