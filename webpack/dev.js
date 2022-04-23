@@ -6,10 +6,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const devConfig = {
   mode: 'development',
   devtool: 'inline-source-map',
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [new HtmlWebpackPlugin({
+    template: path.join(__dirname, '..', 'templates/index.html')
+  })],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, '..', 'dist'),
     },
     compress: true,
     port: 8000,
